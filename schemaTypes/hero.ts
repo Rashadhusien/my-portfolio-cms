@@ -1,68 +1,73 @@
-import { defineType, defineField } from "sanity";
+import {defineType, defineField} from 'sanity'
 
 export const hero = defineType({
-  name: "hero",
-  title: "Hero Section",
-  type: "document",
+  name: 'hero',
+  title: 'Hero Section',
+  type: 'document',
   fields: [
     // Image
     defineField({
-      name: "image",
-      title: "Profile Image",
-      type: "image",
-      options: { hotspot: true },
+      name: 'image',
+      title: 'Profile Image',
+      type: 'image',
+      options: {hotspot: true},
     }),
 
     // Small Text (Hi, I'm Rashad)
     defineField({
-      name: "smallText",
-      title: "Small Text",
-      type: "string",
+      name: 'smallText',
+      title: 'Small Text',
+      type: 'string',
     }),
 
     // Main Title (Web Developer)
     defineField({
-      name: "title",
-      title: "Main Title",
-      type: "string",
+      name: 'title',
+      title: 'Main Title',
+      type: 'string',
+    }),
+    defineField({
+      name: 'highlightedTitle',
+      title: 'Main Title Highlighter',
+      type: 'string',
     }),
 
     // Looping Words Array
     defineField({
-      name: "loopWords",
-      title: "Looping Words",
-      type: "array",
-      of: [{ type: "string" }],
+      name: 'loopWords',
+      title: 'Looping Words',
+      type: 'array',
+      of: [{type: 'string'}],
     }),
 
     // Social Links Array
     defineField({
-      name: "socialLinks",
-      title: "Social Links",
-      type: "array",
+      name: 'socialLinks',
+      title: 'Social Links',
+      type: 'array',
       of: [
         {
-          type: "object",
+          type: 'object',
           fields: [
             defineField({
-              name: "title",
-              title: "Title",
-              type: "string",
+              name: 'title',
+              title: 'Title',
+              type: 'string',
             }),
             defineField({
-              name: "url",
-              title: "URL",
-              type: "url",
+              name: 'url',
+              title: 'URL',
+              type: 'url',
             }),
             defineField({
-              name: "buttonText",
-              title: "Button Text",
-              type: "string",
+              name: 'buttonText',
+              title: 'Button Text',
+              type: 'string',
             }),
             defineField({
-              name: "description",
-              title: "Description",
-              type: "text",
+              name: 'description',
+              title: 'Description',
+              type: 'text',
             }),
           ],
         },
@@ -71,15 +76,15 @@ export const hero = defineType({
 
     // Contact Button
     defineField({
-      name: "contactButtonText",
-      title: "Contact Button Text",
-      type: "string",
+      name: 'contactButtonText',
+      title: 'Contact Button Text',
+      type: 'string',
     }),
 
     defineField({
-      name: "contactButtonLink",
-      title: "Contact Button Link",
-      type: "string",
+      name: 'contactButtonLink',
+      title: 'Contact Button Link',
+      type: 'string',
     }),
   ],
-});
+})
