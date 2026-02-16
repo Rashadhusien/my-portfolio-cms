@@ -39,41 +39,6 @@ export const hero = defineType({
       type: 'array',
       of: [{type: 'string'}],
     }),
-
-    // Social Links Array
-    defineField({
-      name: 'socialLinks',
-      title: 'Social Links',
-      type: 'array',
-      of: [
-        {
-          type: 'object',
-          fields: [
-            defineField({
-              name: 'title',
-              title: 'Title',
-              type: 'string',
-            }),
-            defineField({
-              name: 'url',
-              title: 'URL',
-              type: 'url',
-            }),
-            defineField({
-              name: 'buttonText',
-              title: 'Button Text',
-              type: 'string',
-            }),
-            defineField({
-              name: 'description',
-              title: 'Description',
-              type: 'text',
-            }),
-          ],
-        },
-      ],
-    }),
-
     // Contact Button
     defineField({
       name: 'contactButtonText',
